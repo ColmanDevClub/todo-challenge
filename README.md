@@ -2,7 +2,7 @@
 
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
 
-## The challenge
+## The challe
 
 Your challenge is to build out this todo app **using react** and get it looking as close to the design as possible.
 
