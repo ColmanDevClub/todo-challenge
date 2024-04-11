@@ -52,6 +52,12 @@ const App = () => {
     }
   };
 
+  const clearCompletedTodos = () => {
+    const newTodos = todos.filter((todo) => !todo.isCompleted);
+    setTodos(newTodos);
+    setTodosToShow(newTodos);
+  };
+
   return (
     <>
       <h1>Todo</h1>
@@ -61,7 +67,10 @@ const App = () => {
         removeTodo={removeTodo}
         toggleTodoCompleted={toggleTodoCompleted}
       />
-      <FilterTodos filterTodosByStatus={filterTodosByStatus} />
+      <FilterTodos
+        filterTodosByStatus={filterTodosByStatus}
+        clearCompletedTodos={clearCompletedTodos}
+      />
     </>
   );
 };

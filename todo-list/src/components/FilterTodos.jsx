@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Container, Button, ButtonGroup } from 'react-bootstrap';
 
-const FilterTodos = ({ filterTodosByStatus }) => {
+const FilterTodos = ({ filterTodosByStatus, clearCompletedTodos }) => {
   return (
     <Container className="filter-container">
       <ButtonGroup aria-label="Basic example">
@@ -29,6 +29,9 @@ const FilterTodos = ({ filterTodosByStatus }) => {
         >
           active
         </Button>
+        <Button variant="secondary" onClick={clearCompletedTodos}>
+          clear completed
+        </Button>
       </ButtonGroup>
     </Container>
   );
@@ -36,6 +39,7 @@ const FilterTodos = ({ filterTodosByStatus }) => {
 
 FilterTodos.propTypes = {
   filterTodosByStatus: PropTypes.func.isRequired,
+  clearCompletedTodos: PropTypes.func.isRequired,
 };
 
 export default FilterTodos;
