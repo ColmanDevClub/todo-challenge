@@ -1,19 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AddTodoForm from './components/AddTodoForm';
 import './App.css';
 import { TodoList } from './components/TodoList';
 import FilterTodos from './components/FilterTodos';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: crypto.randomUUID(),
-      text: 'Hi , I am your first todo',
-      isCompleted: false,
-    },
-  ]);
+  const [todos, setTodos] = useState(() => {
+    const localValue = localStorage.getItem('ITEMS');
+    if (localValue == null)
+      return [
+        {
+          id: crypto.randomUUID(),
+          text: 'Hi , I am your first todo',
+          isCompleted: false,
+        },
+      ];
 
+    return JSON.parse(localValue);
+  });
+  useEffect(() => {
+    localStorage.setItem('ITEMS', JSON.stringify(todos));
+  }, [todos]);
   const [todosToShow, setTodosToShow] = useState([...todos]);
 
   const addTodo = (todo) => {
