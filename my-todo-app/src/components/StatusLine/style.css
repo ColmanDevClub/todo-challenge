@@ -1,0 +1,38 @@
+.current-search,
+.search-types,
+.status-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: hsl(0, 0%, 46%);
+}
+
+.current-search,
+.status-line p:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.current-search,
+.status-line p::first-letter {
+  text-transform: uppercase;
+}
+
+.status-line > p:first-child {
+  color: hsl(0, 1%, 60%);
+}
+
+.search-types {
+  gap: 20px;
+}
+
+.search-types p:hover {
+  color: black !important;
+}
+
+p.dark:hover {
+  color: hsl(236, 33%, 92%) !important;
+}

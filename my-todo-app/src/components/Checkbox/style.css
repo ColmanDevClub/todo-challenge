@@ -1,0 +1,39 @@
+.check-box-active,
+.check-box-completed {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.check-box-active {
+  background: none;
+  width: 18px;
+  height: 18px;
+  border: solid 0.4px hsl(233, 11%, 84%);
+}
+
+.todo-item:hover .check-box-active {
+  border: solid 0.4px hsl(220, 98%, 61%);
+}
+
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+}
+
+.check-box-active > .check-icon.dark {
+  display: none;
+  z-index: 20;
+}
+
+.check-box-active > .check-icon.light {
+  display: block;
+}

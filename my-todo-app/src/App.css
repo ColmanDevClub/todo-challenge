@@ -1,0 +1,40 @@
+#root {
+  font-family: "Josefin+Sans", sans-serif;
+  position: relative;
+  max-width: 1280px;
+  display: grid;
+  grid-auto-rows: min-content;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  text-align: center;
+  background-color: #fff;
+}
+
+#root::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url("./assets/images/bg-desktop-light.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 1;
+}
+
+#root.light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+#root.dark {
+  background-color: hsl(235, 21%, 11%);
+}
+
+#root.dark::after {
+  background-image: url("./assets/images/bg-desktop-dark.jpg");
+}

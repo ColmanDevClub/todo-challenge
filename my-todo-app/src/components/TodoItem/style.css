@@ -1,0 +1,61 @@
+.todo-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  color: rgb(37, 37, 37);
+  padding-left: 12px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.cross-icon {
+  display: none;
+}
+
+.todo-item:hover > .cross-icon {
+  display: block;
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo-active-text {
+  font-size: 14px;
+  color: hsl(235, 21%, 11%);
+  z-index: 10;
+}
+
+.todo-completed-text {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: hsl(233, 11%, 84%);
+}
+
+.todo-active-text.dark {
+  color: hsl(0, 0%, 98%);
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 6px 12px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #131212;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
