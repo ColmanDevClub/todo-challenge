@@ -11,31 +11,58 @@ import './App.css'
 function App() {
 
   const [toggle, setToggle] = useState(false);
+  const [newTodo, setNewTodo] = useState();
+  const [todoList, setTodoList] = useState([]);
+
+  const addTodo = () => {
+    setTodoList([...todoList, newTodo]);
+    setNewTodo('');
+  };
 
   const toggleHandler = () => {
     setToggle((toggle) => !toggle)
-    // Get reference to the :root element
     const root = document.documentElement;
-
     if (toggle) {
       root.style.setProperty('background-color', '#dadada');
     }
     else {
       root.style.setProperty('background-color', 'black');
     }
+
+    const rootElements = document.querySelectorAll('.todo-input, .listContainer, .item');
+    for (let i = 0; i < rootElements.length; i++) {
+      if (!toggle) {
+        rootElements[i].style.setProperty('background-color', 'black');
+        rootElements[i].style.setProperty('color', 'white');
+      }
+      else {
+        rootElements[i].style.setProperty('background-color', 'white');
+        rootElements[i].style.setProperty('color', 'rgb(63, 63, 63)')
+      }
+    }
   }
+
+  const handleChangeInput = (e) => {
+    setNewTodo(e.target.value);
+  }
+
+
 
   return (
     <>
       <div className='Container' >
-        <img className='bgDesktopLight' src={toggle ? bgDesktopDark : bgDesktopLight}></img>
         <div className='TodoContainer'>
+          <img className='bgDesktopLight' src={toggle ? bgDesktopDark : bgDesktopLight}></img>
           <div className='HeaderContainer'>
-            <h1>TODO</h1>
+            <h1>T O D O </h1>
             <img onClick={toggleHandler} className='ColorModeBtn' src={toggle ? Sun : Moon} alt="" />
           </div>
-          <input type="text" placeholder='Create a new todo...' />
-          <Todo></Todo>
+          <div className='newInputContainer'>
+            <input type="text" placeholder='Create a new todo...' className='todo-input' onChange={handleChangeInput} value={newTodo} />
+            <button className='addTodoButton' onClick={addTodo}>+</button>
+          </div>
+
+          <Todo todoList={todoList}></Todo>
         </div>
       </div>
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Todoitem() {
+function Todoitem({ newTodo, completed, onClick }) {
     return (
-        <div>Todoitem</div>
+        <p className='item'> {newTodo}</p >
     )
 }
 
