@@ -1,0 +1,41 @@
+.todoListLight {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.createToDoInputLight {
+    background-color: transparent;
+    border: none;
+    color: black;
+    width: 300px;
+}
+
+.menuLight {
+    width: 380px;
+    background-color: white;
+    height: 41px;
+    border-radius: 4px;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.menuLight .numOfItemsLeft,
+.menuLight button {
+    font-size: 12px;
+    color: var(--DarkGrayishBlue);
+}
+
+.numOfItemsLeft {
+    margin-left: 10px;
+}
+
+.menuLight button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+.singleTodo { 
+    position: relative;
+    width: 380px;
+    background-color:var(--VeryDarkDesaturatedBlue);
+    height: 50px;
+    display: flex;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.checkCircle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--VeryDarkGrayishBlue);
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+
+.createToDo {
+    margin-bottom: 20px;
+}
+
+hr {
+    margin: 0;
+    padding: 0; 
+    background-color: var(--VeryDarkGrayishBlue);
+    border-color: var(--VeryDarkGrayishBlue);
+}
+
+.check {
+    padding: 0;
+    visibility: hidden;
+}
+
+.completed .check {
+    visibility :visible;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.completed .checkCircle {
+    background: rgb(226,96,217);
+    background: linear-gradient(324deg, rgba(226,96,217,1) 0%, rgba(117,230,237,1) 100%);
+}
+
+.deleteTodo {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 9px;
+    margin-top: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+h1 {
+    position: absolute;
+    margin-right: 250px;
+    top: 40px;
+    letter-spacing: 9px;
+}
+
+.LightHome span {
+    color: var(--VeryDarkGrayishBlue);
+    font-size: 14px;
+}
+
+.LightHome > span {
+    color: var(--DarkGrayishBlue);
+    font-size: 13px;
+    margin-top: 21px;
+}

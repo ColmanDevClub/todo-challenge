@@ -1,0 +1,42 @@
+.lightSpan {
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.singleTodoLight {
+    position: relative;
+    width: 380px;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border-color: var(--VeryLightGrayishBlue);
+}
+
+.checkCircleLight {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--VeryLightGrayishBlue);
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+
+.completed .checkCircleLight {
+    background: rgb(226,96,217);
+    background: linear-gradient(324deg, rgba(226,96,217,1) 0%, rgba(117,230,237,1) 100%);
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: var(--DarkGrayishBlue);
+}

@@ -1,0 +1,47 @@
+.createToDoInput {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 300px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.menu {
+    width: 380px;
+    background-color:var(--VeryDarkDesaturatedBlue);
+    height: 41px;
+    display: flex;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.todoList {
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 5px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu .numOfItemsLeft,
+.menu button {
+    font-size: 12px;
+    color: var(--DarkGrayishBlue);
+}
+
+.numOfItemsLeft {
+    margin-left: 10px;
+}
+
+.menu button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
