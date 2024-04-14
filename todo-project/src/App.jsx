@@ -23,16 +23,16 @@ function App() {
     setToggle((toggle) => !toggle)
     const root = document.documentElement;
     if (toggle) {
-      root.style.setProperty('background-color', '#dadada');
+      root.style.setProperty('background-color', 'rgb(236, 236, 236)');
     }
     else {
-      root.style.setProperty('background-color', 'black');
+      root.style.setProperty('background-color', 'rgb(26, 26, 26)');
     }
 
-    const rootElements = document.querySelectorAll('.todo-input, .listContainer, .item');
+    const rootElements = document.querySelectorAll('.todo-input, .listContainer, .item , .addTodoButton');
     for (let i = 0; i < rootElements.length; i++) {
       if (!toggle) {
-        rootElements[i].style.setProperty('background-color', 'black');
+        rootElements[i].style.setProperty('background-color', 'rgb(62, 62, 65)');
         rootElements[i].style.setProperty('color', 'white');
       }
       else {
@@ -46,7 +46,10 @@ function App() {
     setNewTodo(e.target.value);
   }
 
-
+  const deleteItem = (index) => {
+    const newList = [...todoList.slice(0, index), ...todoList.slice(index + 1)];
+    setTodoList(newList);
+  }
 
   return (
     <>
@@ -62,7 +65,7 @@ function App() {
             <button className='addTodoButton' onClick={addTodo}>+</button>
           </div>
 
-          <Todo todoList={todoList}></Todo>
+          <Todo todoList={todoList} deleteItem={deleteItem}></Todo>
         </div>
       </div>
 
