@@ -1,13 +1,18 @@
 import './App.css'
-import Input from './components/Input'
 import List from './components/List'
+import TopBar from './components/TopBar'
+import Input from './components/Input'
+import BottomBar from './components/BottomBar'
+import { useState } from "react";
 function App() {
-  
+  const [todos,setTodos] = useState([{id : 1 , title : "Test" , isCompleted : false}]);
 
   return <>
   <div className='app'>
-  <h1>TODO</h1>
-  <List></List>
+    <TopBar />
+    <Input setNewTodo={setTodos} todos={todos}/>
+    <List todos={todos} setTodo={setTodos}></List>
+    <BottomBar items={todos.length} setTodos={setTodos} />
   </div>
     </>
   

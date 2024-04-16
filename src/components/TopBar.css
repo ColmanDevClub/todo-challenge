@@ -1,0 +1,11 @@
+.top-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+   }
+   .top-page button{
+    background: none;
+    border: none;
+    /* outline: auto; */
+   }
