@@ -1,0 +1,22 @@
+.form-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+.todo-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 4px solid #f1f1f1;
+
+}
+.completed {
+  text-decoration: line-through;
+}
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
